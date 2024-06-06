@@ -21,11 +21,10 @@ print('Opened database successfully')
 
 @app.route('/')
 def one():
-    todaydate = datetime.date.today()
     cur = conn.cursor()
-    sql = "SELECT * FROM yen WHERE date = %s"
+    sql = "SELECT * FROM yen ORDER BY date DESC LIMIT 1"
     try:
-        cur.execute(sql, (todaydate,))
+        cur.execute(sql)
         rows = cur.fetchall()  # 使用 fetchall 
     except psycopg2.DatabaseError as e:
         print(f"Error: {e}")
