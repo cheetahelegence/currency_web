@@ -19,7 +19,7 @@ conn = psycopg2.connect(host=host, user=user, password=password, database=databa
 print('Opened database successfully')
 
 
-@app.route('/one')
+@app.route('/')
 def one():
     todaydate = datetime.date.today()
     cur = conn.cursor()
