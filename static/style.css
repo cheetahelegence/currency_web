@@ -1,0 +1,21 @@
+h2,
+p {
+  text-align: center;
+}
+
+.center {
+  display: block;
+  margin: 0 auto;
+}
+
+.timeline {
+  width: 70%;
+  border: 1px solid #000;
+  margin: 0 auto;
+}
+
+.price {
+  width: 70%;
+  border: 1px solid #000;
+  margin: 0 auto;
+}
