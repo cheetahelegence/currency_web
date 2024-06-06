@@ -36,7 +36,7 @@ def one():
 @app.route('/two')
 def two():
     cur = conn.cursor()
-    sql = "SELECT * FROM `yen` ORDER BY date DESC LIMIT 7"
+    sql = "SELECT * FROM yen ORDER BY date DESC LIMIT 7"
     try:
         cur.execute(sql)
         rows = cur.fetchall()  # 使用 fetchall 
